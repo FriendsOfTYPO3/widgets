@@ -8,10 +8,12 @@ services:
     resource: '../Classes/*'
 
   dashboard.widget.onlineUsers:
-    class: 'TYPO3\CMS\Dashboard\Widgets\ListWidget'
+    class: 'FriendsOfTYPO3\Widgets\Widgets\ExtendedListWidget'
     arguments:
       $dataProvider: '@FriendsOfTYPO3\Widgets\Widgets\Provider\UsersOnlineDataProvider'
       $view: '@dashboard.views.widget'
+      $options:
+        template: 'Widget/UsersOnlineWidget'
     tags:
       - name: dashboard.widget
         identifier: 'onlineUsers'

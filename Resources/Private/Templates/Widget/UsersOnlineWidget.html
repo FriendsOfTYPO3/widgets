@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Widget/Widget" />
+<f:section name="main">
+
+    <div class="widget-table-wrapper">
+        <table class="widget-table">
+            <f:for each="{items}" as="onlineUser">
+                <f:for each="{onlineUser.sessions}" as="session" iteration="it">
+                    <f:if condition="{it.isFirst}">
+                        <tr>
+                            <td><be:avatar backendUser="{onlineUser.backendUser.uid}" showIcon="true" /></td>
+                            <td><b>{onlineUser.backendUser.userName}</b>
+                                <span class="label label-success"><f:translate key="online" default="online" /></span><br />
+                                {onlineUser.backendUser.realName}</td>
+                            <td>
+                                <f:format.date format="{dateFormat} {timeFormat}" date="{session.timestamp}" />
+                            </td>
+                            <td>{session.ip}</td>
+                        </tr>
+                    </f:if>
+                </f:for>
+            </f:for>
+        </table>
+    </div>
+
+</f:section>
+<f:section name="footer">
+    <f:if condition="{button}">
+        <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.text, default: button.text)}</a>
+    </f:if>
+</f:section>
+</html>
