@@ -1,0 +1,23 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  FriendsOfTYPO3\Widgets\:
+    resource: '../Classes/*'
+
+  dashboard.widget.onlineUsers:
+    class: 'TYPO3\CMS\Dashboard\Widgets\ListWidget'
+    arguments:
+      $dataProvider: '@FriendsOfTYPO3\Widgets\Widgets\Provider\UsersOnlineDataProvider'
+      $view: '@dashboard.views.widget'
+    tags:
+      - name: dashboard.widget
+        identifier: 'onlineUsers'
+        groupNames: 'systemInfo'
+        title: 'Online users'
+        description: 'Online users'
+        iconIdentifier: 'content-widget-list'
+        height: 'large'
+        width: 'medium'

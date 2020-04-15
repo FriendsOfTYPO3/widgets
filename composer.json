@@ -1,0 +1,41 @@
+{
+  "name": "friendsoftypo3/widgets",
+  "type": "typo3-cms-extension",
+  "description": "Dashboard Widgets for TYPO3",
+  "minimum-stability": "dev",
+  "homepage": "https://typo3.org",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Richard Haeser",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^10.4 || 10.*@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "FriendsOfTYPO3\\Widgets\\": "Classes/"
+    }
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.15",
+    "typo3/testing-framework": "^4.9 || ^5.0",
+    "phpstan/phpstan": "^0.12.0@dev"
+  },
+  "scripts": {
+    "test:php:unit": [
+      "phpunit -c build/phpunit.xml"
+    ],
+    "test": [
+      "@test:php:unit"
+    ],
+    "cgl": [
+      "php-cs-fixer fix -v --dry-run --using-cache false"
+    ],
+    "cgl-fix": [
+      "php-cs-fixer fix -v --using-cache false"
+    ]
+  }
+}
