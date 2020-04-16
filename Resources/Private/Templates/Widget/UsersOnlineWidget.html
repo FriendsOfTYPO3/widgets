@@ -1,16 +1,25 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Widget/Widget" />
-<f:section name="main">
-
+<div class="widget-content-title"><span>{f:translate(id: configuration.title, default: configuration.title)}</span><span class="badge badge-success"><f:count>{items}</f:count></span> </div>
+<div class="widget-content-main">
     <div class="widget-table-wrapper">
         <table class="widget-table">
+            <tr>
+                <th width="40"></th>
+                <th class="col-title"><f:translate key="userName" extensionName="widgets" /> / <f:translate key="realName" extensionName="widgets" /></th>
+                <th><f:translate key="lastAccess" extensionName="widgets" /></th>
+                <th><f:translate key="ipAddress" extensionName="widgets" /></th>
+            </tr>
             <f:for each="{items}" as="onlineUser">
                 <f:for each="{onlineUser.sessions}" as="session" iteration="it">
                     <f:if condition="{it.isFirst}">
                         <tr>
                             <td><be:avatar backendUser="{onlineUser.backendUser.uid}" showIcon="true" /></td>
-                            <td><b>{onlineUser.backendUser.userName}</b>
-                                <span class="label label-success"><f:translate key="online" default="online" /></span><br />
+                            <td>
+                                <b>{onlineUser.backendUser.userName}</b>
+                                <f:if condition="{onlineUser.backendUser.uid} == {currentUser.user.uid}">
+                                    <span class="label label-success"><f:translate key="you" extensionName="widgets" /></span>
+                                </f:if>
+                                <br />
                                 {onlineUser.backendUser.realName}</td>
                             <td>
                                 <f:format.date format="{dateFormat} {timeFormat}" date="{session.timestamp}" />
@@ -22,11 +31,10 @@
             </f:for>
         </table>
     </div>
-
-</f:section>
-<f:section name="footer">
-    <f:if condition="{button}">
+</div>
+<f:if condition="{button}">
+    <div class="widget-content-footer">
         <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.text, default: button.text)}</a>
-    </f:if>
-</f:section>
+    </div>
+</f:if>
 </html>

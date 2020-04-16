@@ -2,6 +2,7 @@
 declare(strict_types=1);
 namespace FriendsOfTYPO3\Widgets\Widgets;
 
+use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Dashboard\Utility\ButtonUtility;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\ListDataProviderInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetConfigurationInterface;
@@ -57,11 +58,17 @@ class ExtendedListWidget implements WidgetInterface
         $this->view->assignMultiple([
             'items' => $this->dataProvider->getItems(),
             'options' => $this->options,
+            'currentUser' => $this->getBackendUser(),
             'button' => ButtonUtility::generateButtonConfig($this->buttonProvider),
             'configuration' => $this->configuration,
             'dateFormat' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['ddmmyy'],
             'timeFormat' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['hhmm'],
         ]);
         return $this->view->render();
+    }
+
+    protected function getBackendUser(): BackendUserAuthentication
+    {
+        return $GLOBALS['BE_USER'];
     }
 }

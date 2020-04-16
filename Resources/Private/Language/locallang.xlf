@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1587018222" source-language="en" datatype="plaintext" original="EXT:widgets/Resources/Private/Language/locallang.xlf" date="2020-04-16T08:24:14Z" product-name="widgets">
+		<header/>
+		<body>
+			<trans-unit id="userName" resname="userName">
+				<source>Username</source>
+			</trans-unit>
+			<trans-unit id="realName" resname="realName">
+				<source>Real Name</source>
+			</trans-unit>
+			<trans-unit id="lastAccess" resname="lastAccess">
+				<source>Last access</source>
+			</trans-unit>
+			<trans-unit id="ipAddress" resname="ipAddress">
+				<source>IP address</source>
+			</trans-unit>
+			<trans-unit id="you" resname="online">
+				<source>You</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
