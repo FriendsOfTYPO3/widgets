@@ -3,6 +3,15 @@
 	<file t3:id="1587018222" source-language="en" datatype="plaintext" original="EXT:widgets/Resources/Private/Language/locallang.xlf" date="2020-04-16T08:24:14Z" product-name="widgets">
 		<header/>
 		<body>
+			<trans-unit id="type" resname="userName">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="type.admin.1" resname="userName">
+				<source>User Type: Admin</source>
+			</trans-unit>
+			<trans-unit id="type.admin.0" resname="userName">
+				<source>User Type: Editor</source>
+			</trans-unit>
 			<trans-unit id="userName" resname="userName">
 				<source>Username</source>
 			</trans-unit>

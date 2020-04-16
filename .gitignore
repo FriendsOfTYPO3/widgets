@@ -11,6 +11,8 @@
 /*.cache
 /.build
 /build/.phpunit.result.cache
+/build/node_modules
+/Build/.cache/
 
 *.css.map
 **/*temp_*

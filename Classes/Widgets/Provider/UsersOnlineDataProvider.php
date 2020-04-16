@@ -5,7 +5,6 @@ namespace FriendsOfTYPO3\Widgets\Widgets\Provider;
 use TYPO3\CMS\Beuser\Domain\Repository\BackendUserRepository;
 use TYPO3\CMS\Beuser\Domain\Repository\BackendUserSessionRepository;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\ListDataProviderInterface;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class UsersOnlineDataProvider implements ListDataProviderInterface
 {
