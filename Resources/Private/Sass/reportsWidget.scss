@@ -1,0 +1,25 @@
+@import 'Base';
+
+.widget {
+    &.widget-identifier-reports {
+        .status-report {
+            margin-top: -20px;
+        }
+
+        .status-report-item {
+            border-bottom: 2px solid #afafaf;
+        }
+
+        td {
+            padding: 20px;
+        }
+
+        .status-report-severity-1 {
+            background-color: $danger-bg;
+        }
+
+        .status-report-severity-2 {
+            background-color: $warning-bg;
+        }
+    }
+}

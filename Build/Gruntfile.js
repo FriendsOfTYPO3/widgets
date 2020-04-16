@@ -48,7 +48,6 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     paths: {
-      sources: 'Sources/',
       sass: '../Resources/Private/Sass/',
       css: '../Resources/Public/Css/',
     },
@@ -76,7 +75,8 @@ module.exports = function (grunt) {
       },
       sass: {
         files: {
-          "<%= paths.css %>extendedListWidget.css": "<%= paths.sass %>extendedListWidget.scss"
+          "<%= paths.css %>extendedListWidget.css": "<%= paths.sass %>extendedListWidget.scss",
+          "<%= paths.css %>reportsWidget.css": "<%= paths.sass %>reportsWidget.scss"
         }
       },
     },

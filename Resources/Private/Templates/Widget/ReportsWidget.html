@@ -1,17 +1,22 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Widget/Widget" />
 <f:section name="main">
-    <f:for each="{reports}" as="categoryReports" key="category">
-        <f:if condition="{categoryReports -> f:count()} > 0">
-                <f:for each="{categoryReports}" as="report">
-                    <div class="status-report-severity-{report.severity}">
-                        <h3><span>{category}:</span> {report.title}</h3>
-                        <p><f:format.html>{report.message}</f:format.html></p>
-                    </div>
-
-                </f:for>
-        </f:if>
-    </f:for>
+    <div class="widget-table-wrapper status-report">
+        <table class="widget-table">
+            <f:for each="{reports}" as="categoryReports" key="category">
+                <f:if condition="{categoryReports -> f:count()} > 0">
+                    <f:for each="{categoryReports}" as="report">
+                        <tr class="status-report-item status-report-severity-{report.severity}">
+                            <td>
+                                <h3><span>{category}:</span> {report.title}</h3>
+                                <p><f:format.html>{report.message}</f:format.html></p>
+                            </td>
+                        </tr>
+                    </f:for>
+                </f:if>
+            </f:for>
+        </table>
+    </div>
 
 </f:section>
 <f:section name="footer">

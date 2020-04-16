@@ -7,6 +7,7 @@ use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Localization\LanguageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Dashboard\Utility\ButtonUtility;
+use TYPO3\CMS\Dashboard\Widgets\Interfaces\AdditionalCssInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\ListDataProviderInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetConfigurationInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetInterface;
@@ -16,7 +17,7 @@ use TYPO3\CMS\Reports\Report\Status\Status;
 use TYPO3\CMS\Reports\ReportInterface;
 use TYPO3\CMS\Reports\Status as ReportStatus;
 
-class ReportsWidget implements WidgetInterface
+class ReportsWidget implements WidgetInterface, AdditionalCssInterface
 {
     /**
      * @var WidgetConfigurationInterface
@@ -66,6 +67,13 @@ class ReportsWidget implements WidgetInterface
             'timeFormat' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['hhmm'],
         ]);
         return $this->view->render();
+    }
+
+    public function getCssFiles(): array
+    {
+        return [
+            'EXT:widgets/Resources/Public/Css/reportsWidget.css',
+        ];
     }
 
     protected function getWarningsAndErrors(): array
