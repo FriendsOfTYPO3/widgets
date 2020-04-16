@@ -23,3 +23,19 @@ services:
         iconIdentifier: 'content-widget-list'
         height: 'large'
         width: 'medium'
+
+  dashboard.widget.reports:
+    class: 'FriendsOfTYPO3\Widgets\Widgets\ReportsWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $options:
+        template: 'Widget/UsersOnlineWidget'
+    tags:
+      - name: dashboard.widget
+        identifier: 'reports'
+        groupNames: 'systemInfo'
+        title: 'Status report'
+        description: 'An overview of status reports with the severity "Error"'
+        iconIdentifier: 'content-widget-list'
+        height: 'medium'
+        width: 'small'
