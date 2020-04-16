@@ -1,10 +1,10 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="widget-content-title"><span>{f:translate(id: configuration.title, default: configuration.title)}</span><span class="badge badge-success"><f:count>{items}</f:count></span> </div>
+<div class="widget-content-title widget-content-title--badge"><span>{f:translate(id: configuration.title, default: configuration.title)}</span><span class="badge badge-success widget-content-badge-number"><f:count>{items}</f:count></span> </div>
 <div class="widget-content-main">
     <div class="widget-table-wrapper">
         <table class="widget-table">
             <tr>
-                <th width="40"></th>
+                <th class="widget-table-usertype"><f:translate key="type" extensionName="widgets" /></th>
                 <th class="col-title"><f:translate key="userName" extensionName="widgets" /> / <f:translate key="realName" extensionName="widgets" /></th>
                 <th><f:translate key="lastAccess" extensionName="widgets" /></th>
                 <th><f:translate key="ipAddress" extensionName="widgets" /></th>
@@ -13,7 +13,7 @@
                 <f:for each="{onlineUser.sessions}" as="session" iteration="it">
                     <f:if condition="{it.isFirst}">
                         <tr>
-                            <td><be:avatar backendUser="{onlineUser.backendUser.uid}" showIcon="true" /></td>
+                            <td title="{f:translate(key: 'type.admin.{onlineUser.backendUser.isAdministrator}', extensionName: 'widgets')} (id={onlineUser.backendUser.uid})"><be:avatar backendUser="{onlineUser.backendUser.uid}" showIcon="true" /></td>
                             <td>
                                 <b>{onlineUser.backendUser.userName}</b>
                                 <f:if condition="{onlineUser.backendUser.uid} == {currentUser.user.uid}">

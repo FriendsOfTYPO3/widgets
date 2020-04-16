@@ -4,12 +4,13 @@ namespace FriendsOfTYPO3\Widgets\Widgets;
 
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Dashboard\Utility\ButtonUtility;
+use TYPO3\CMS\Dashboard\Widgets\Interfaces\AdditionalCssInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\ListDataProviderInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetConfigurationInterface;
 use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetInterface;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
-class ExtendedListWidget implements WidgetInterface
+class ExtendedListWidget implements WidgetInterface, AdditionalCssInterface
 {
     /**
      * @var WidgetConfigurationInterface
@@ -49,6 +50,13 @@ class ExtendedListWidget implements WidgetInterface
             ],
             $options
         );
+    }
+
+    public function getCssFiles(): array
+    {
+        return [
+            'EXT:widgets/Resources/Public/Css/extendedListWidget.css',
+        ];
     }
 
     public function renderWidgetContent(): string
