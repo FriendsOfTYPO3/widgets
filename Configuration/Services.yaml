@@ -23,3 +23,19 @@ services:
         iconIdentifier: 'content-widget-list'
         height: 'large'
         width: 'medium'
+
+  widgets.dashboard.widget.contact:
+    class: 'FriendsOfTYPO3\Widgets\Widgets\ContactWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $options:
+        template: 'Widget/ContactWidget'
+    tags:
+      - name: dashboard.widget
+        identifier: 'widgets-contact'
+        groupNames: 'general'
+        title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.contact.title'
+        description: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.contact.description'
+        iconIdentifier: 'content-widget-list'
+        height: 'medium'
+        width: 'medium'

@@ -33,6 +33,12 @@
 			<trans-unit id="widgets.dashboard.widget.onlineUsers.description" xml:space="preserve">
 				<source>Will show you which users are currently online</source>
 			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.contact.title" xml:space="preserve">
+				<source>Contact information</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.contact.description" xml:space="preserve">
+				<source>Will show contact information of supplier</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
