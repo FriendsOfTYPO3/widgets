@@ -15,11 +15,11 @@
         }
 
         .status-report-severity-1 {
-            background-color: $danger-bg;
+            background-color: $warning-bg;
         }
 
         .status-report-severity-2 {
-            background-color: $warning-bg;
+            background-color: $danger-bg;
         }
     }
 }

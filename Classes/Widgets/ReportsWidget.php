@@ -6,11 +6,9 @@ use _HumbugBox3ab8cff0fda0\ParagonIE\Sodium\Core\Curve25519\Ge\P1p1;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Localization\LanguageService;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Dashboard\Utility\ButtonUtility;
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\AdditionalCssInterface;
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\ListDataProviderInterface;
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetConfigurationInterface;
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\WidgetInterface;
+use TYPO3\CMS\Dashboard\Widgets\AdditionalCssInterface;
+use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
+use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Reports\Report\Status\Status;
@@ -48,7 +46,7 @@ class ReportsWidget implements WidgetInterface, AdditionalCssInterface
         $this->options = array_merge(
             [
                 'showErrors' => true,
-                'showWarnings' => false
+                'showWarnings' => true
             ],
             $options
         );
@@ -61,7 +59,7 @@ class ReportsWidget implements WidgetInterface, AdditionalCssInterface
         $this->view->assignMultiple([
             'options' => $this->options,
             'reports' => $this->getWarningsAndErrors(),
-            'button' => ButtonUtility::generateButtonConfig($this->buttonProvider),
+            'button' => $this->buttonProvider,
             'configuration' => $this->configuration,
             'dateFormat' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['ddmmyy'],
             'timeFormat' => $GLOBALS['TYPO3_CONF_VARS']['SYS']['hhmm'],
