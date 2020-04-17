@@ -3,29 +3,35 @@
 	<file t3:id="1587018222" source-language="en" datatype="plaintext" original="EXT:widgets/Resources/Private/Language/locallang.xlf" date="2020-04-16T08:24:14Z" product-name="widgets">
 		<header/>
 		<body>
-			<trans-unit id="type" resname="userName">
+			<trans-unit id="type" xml:space="preserve">
 				<source>Type</source>
 			</trans-unit>
-			<trans-unit id="type.admin.1" resname="userName">
+			<trans-unit id="type.admin.1" xml:space="preserve">
 				<source>User Type: Admin</source>
 			</trans-unit>
-			<trans-unit id="type.admin.0" resname="userName">
+			<trans-unit id="type.admin.0" xml:space="preserve">
 				<source>User Type: Editor</source>
 			</trans-unit>
-			<trans-unit id="userName" resname="userName">
+			<trans-unit id="userName" xml:space="preserve">
 				<source>Username</source>
 			</trans-unit>
-			<trans-unit id="realName" resname="realName">
+			<trans-unit id="realName" xml:space="preserve">
 				<source>Real Name</source>
 			</trans-unit>
-			<trans-unit id="lastAccess" resname="lastAccess">
+			<trans-unit id="lastAccess" xml:space="preserve">
 				<source>Last access</source>
 			</trans-unit>
-			<trans-unit id="ipAddress" resname="ipAddress">
+			<trans-unit id="ipAddress" xml:space="preserve">
 				<source>IP address</source>
 			</trans-unit>
-			<trans-unit id="you" resname="online">
+			<trans-unit id="you" xml:space="preserve">
 				<source>You</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.onlineUsers.title" xml:space="preserve">
+				<source>Current online users</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.onlineUsers.description" xml:space="preserve">
+				<source>Will show you which users are currently online</source>
 			</trans-unit>
 		</body>
 	</file>

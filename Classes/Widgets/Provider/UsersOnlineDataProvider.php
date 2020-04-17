@@ -4,7 +4,7 @@ namespace FriendsOfTYPO3\Widgets\Widgets\Provider;
 
 use TYPO3\CMS\Beuser\Domain\Repository\BackendUserRepository;
 use TYPO3\CMS\Beuser\Domain\Repository\BackendUserSessionRepository;
-use TYPO3\CMS\Dashboard\Widgets\Interfaces\ListDataProviderInterface;
+use TYPO3\CMS\Dashboard\Widgets\ListDataProviderInterface;
 
 class UsersOnlineDataProvider implements ListDataProviderInterface
 {
