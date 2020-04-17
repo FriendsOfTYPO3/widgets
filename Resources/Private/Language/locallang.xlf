@@ -33,6 +33,15 @@
 			<trans-unit id="widgets.dashboard.widget.onlineUsers.description" xml:space="preserve">
 				<source>Will show you which users are currently online</source>
 			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.statusReport.button.title" xml:space="preserve">
+				<source>Open full Status Report</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.statusReport.title" xml:space="preserve">
+				<source>Status Report</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.statusReport.description" xml:space="preserve">
+				<source>Gives you an overview of errors and warnings in your installation</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

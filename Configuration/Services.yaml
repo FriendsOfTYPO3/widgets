@@ -7,6 +7,10 @@ services:
   FriendsOfTYPO3\Widgets\:
     resource: '../Classes/*'
 
+  FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider:
+    arguments:
+      $title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.statusReport.button.title'
+
   widgets.dashboard.widget.onlineUsers:
     class: 'FriendsOfTYPO3\Widgets\Widgets\ExtendedListWidget'
     arguments:
@@ -28,14 +32,15 @@ services:
     class: 'FriendsOfTYPO3\Widgets\Widgets\ReportsWidget'
     arguments:
       $view: '@dashboard.views.widget'
+      $buttonProvider: '@FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider'
       $options:
         template: 'Widget/UsersOnlineWidget'
     tags:
       - name: dashboard.widget
-        identifier: 'reports'
+        identifier: 'widgets-statusReport'
         groupNames: 'systemInfo'
-        title: 'Status report'
-        description: 'An overview of status reports with the severity "Error"'
+        title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.statusReport.title'
+        description: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.statusReport.description'
         iconIdentifier: 'content-widget-list'
         height: 'medium'
-        width: 'small'
+        width: 'medium'

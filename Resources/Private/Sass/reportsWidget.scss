@@ -1,17 +1,22 @@
 @import 'Base';
 
 .widget {
-    &.widget-identifier-reports {
+    &.widget-identifier-widgets-statusReport {
+        .widget-table-wrapper {
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
         .status-report {
             margin-top: -20px;
         }
 
-        .status-report-item {
-            border-bottom: 2px solid #afafaf;
-        }
-
         td {
             padding: 20px;
+        }
+
+        .widget-content-footer {
+            padding-top: 20px;
         }
 
         .status-report-severity-1 {
