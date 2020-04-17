@@ -1,0 +1,25 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  FriendsOfTYPO3\Widgets\:
+    resource: '../Classes/*'
+
+  widgets.dashboard.widget.onlineUsers:
+    class: 'FriendsOfTYPO3\Widgets\Widgets\ExtendedListWidget'
+    arguments:
+      $dataProvider: '@FriendsOfTYPO3\Widgets\Widgets\Provider\UsersOnlineDataProvider'
+      $view: '@dashboard.views.widget'
+      $options:
+        template: 'Widget/UsersOnlineWidget'
+    tags:
+      - name: dashboard.widget
+        identifier: 'widgets-onlineUsers'
+        groupNames: 'systemInfo'
+        title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.onlineUsers.title'
+        description: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.onlineUsers.description'
+        iconIdentifier: 'content-widget-list'
+        height: 'large'
+        width: 'medium'
