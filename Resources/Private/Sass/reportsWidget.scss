@@ -26,5 +26,18 @@
         .status-report-severity-2 {
             background-color: $danger-bg;
         }
+
+        .status-report-severity-0 {
+            background-color: $success-bg;
+        }
+
+        .widget-success-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-weight: bold;
+            color: $success;
+        }
     }
 }

@@ -27,6 +27,9 @@
 			<trans-unit id="you" xml:space="preserve">
 				<source>You</source>
 			</trans-unit>
+			<trans-unit id="noErrors" xml:space="preserve">
+				<source>No problems found!</source>
+			</trans-unit>
 			<trans-unit id="widgets.dashboard.widget.onlineUsers.title" xml:space="preserve">
 				<source>Current online users</source>
 			</trans-unit>

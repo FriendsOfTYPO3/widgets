@@ -29,7 +29,7 @@ services:
         width: 'medium'
 
   dashboard.widget.reports:
-    class: 'FriendsOfTYPO3\Widgets\Widgets\ReportsWidget'
+    class: 'FriendsOfTYPO3\Widgets\Widgets\StatusReportWidget'
     arguments:
       $view: '@dashboard.views.widget'
       $buttonProvider: '@FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider'

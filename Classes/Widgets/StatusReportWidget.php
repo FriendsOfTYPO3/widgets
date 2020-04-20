@@ -10,7 +10,7 @@ use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 use TYPO3\CMS\Reports\Status as ReportStatus;
 
-class ReportsWidget implements WidgetInterface, AdditionalCssInterface
+class StatusReportWidget implements WidgetInterface, AdditionalCssInterface
 {
     /**
      * @var WidgetConfigurationInterface
@@ -41,7 +41,7 @@ class ReportsWidget implements WidgetInterface, AdditionalCssInterface
         $this->options = array_merge(
             [
                 'showErrors' => true,
-                'showWarnings' => true
+                'showWarnings' => false
             ],
             $options
         );
@@ -61,7 +61,7 @@ class ReportsWidget implements WidgetInterface, AdditionalCssInterface
 
     public function renderWidgetContent(): string
     {
-        $this->view->setTemplate('Widget/ReportsWidget');
+        $this->view->setTemplate('Widget/StatusReportWidget');
 
         $this->view->assignMultiple([
             'options' => $this->options,
