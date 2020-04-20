@@ -1,0 +1,43 @@
+@import 'Base';
+
+.widget {
+    &.widget-identifier-widgets-statusReport {
+        .widget-table-wrapper {
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
+        .status-report {
+            margin-top: -20px;
+        }
+
+        td {
+            padding: 20px;
+        }
+
+        .widget-content-footer {
+            padding-top: 20px;
+        }
+
+        .status-report-severity-1 {
+            background-color: $warning-bg;
+        }
+
+        .status-report-severity-2 {
+            background-color: $danger-bg;
+        }
+
+        .status-report-severity-0 {
+            background-color: $success-bg;
+        }
+
+        .widget-success-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-weight: bold;
+            color: $success;
+        }
+    }
+}

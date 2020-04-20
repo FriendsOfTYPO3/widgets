@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Widget/Widget" />
+<f:section name="main">
+
+    <f:if condition="{reports -> f:count()}">
+        <f:then>
+            <div class="widget-table-wrapper">
+                <table class="widget-table">
+                    <tbody>
+                        <f:for each="{reports}" as="categoryReports">
+                            <tr class="status-report-item status-report-severity-{categoryReports.1.severity}">
+                                <td>
+                                    <div><strong>{categoryReports.1.title}</strong></div>
+                                    <div><small>{categoryReports.0}</small></div>
+                                    <p><f:format.html>{categoryReports.1.message}</f:format.html></p>
+                                </td>
+                            </tr>
+                        </f:for>
+                    </tbody>
+                </table>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="widget-success-wrapper">
+                <div><f:translate key="noErrors" extensionName="widgets" /></div>
+            </div>
+        </f:else>
+    </f:if>
+
+
+
+</f:section>
+<f:section name="footer">
+    <f:if condition="{button}">
+        <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.title, default: button.title)}</a>
+    </f:if>
+</f:section>
+</html>

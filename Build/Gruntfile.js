@@ -76,7 +76,8 @@ module.exports = function (grunt) {
       },
       sass: {
         files: {
-          "<%= paths.css %>extendedListWidget.css": "<%= paths.sass %>extendedListWidget.scss"
+          "<%= paths.css %>extendedListWidget.css": "<%= paths.sass %>extendedListWidget.scss",
+          "<%= paths.css %>reportsWidget.css": "<%= paths.sass %>reportsWidget.scss"
         }
       },
     },

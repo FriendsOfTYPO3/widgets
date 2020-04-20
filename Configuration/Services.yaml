@@ -7,6 +7,10 @@ services:
   FriendsOfTYPO3\Widgets\:
     resource: '../Classes/*'
 
+  FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider:
+    arguments:
+      $title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.statusReport.button.title'
+
   widgets.dashboard.widget.onlineUsers:
     class: 'FriendsOfTYPO3\Widgets\Widgets\ExtendedListWidget'
     arguments:
@@ -22,4 +26,21 @@ services:
         description: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.onlineUsers.description'
         iconIdentifier: 'content-widget-list'
         height: 'large'
+        width: 'medium'
+
+  dashboard.widget.reports:
+    class: 'FriendsOfTYPO3\Widgets\Widgets\StatusReportWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $buttonProvider: '@FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider'
+      $options:
+        template: 'Widget/UsersOnlineWidget'
+    tags:
+      - name: dashboard.widget
+        identifier: 'widgets-statusReport'
+        groupNames: 'systemInfo'
+        title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.statusReport.title'
+        description: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.statusReport.description'
+        iconIdentifier: 'content-widget-list'
+        height: 'medium'
         width: 'medium'

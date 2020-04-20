@@ -9,6 +9,10 @@
     {
       "name": "Richard Haeser",
       "role": "Developer"
+    },
+    {
+      "name": "Koen Wouters",
+      "role": "Developer"
     }
   ],
   "require": {
