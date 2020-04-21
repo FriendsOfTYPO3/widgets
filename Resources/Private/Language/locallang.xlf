@@ -45,6 +45,15 @@
 			<trans-unit id="widgets.dashboard.widget.statusReport.description" xml:space="preserve">
 				<source>Gives you an overview of errors and warnings in your installation</source>
 			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.pagesWithoutMetaDescription.title" xml:space="preserve">
+				<source>Pages without Meta Description</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.pagesWithoutMetaDescription.description" xml:space="preserve">
+				<source>Returns a list of last edited pages without a Meta Description</source>
+			</trans-unit>
+			<trans-unit id="widget_group.seo" xml:space="preserve">
+				<source>SEO</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
