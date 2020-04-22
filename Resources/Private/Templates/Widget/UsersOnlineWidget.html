@@ -1,6 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="widget-content-title widget-content-title--badge"><span>{f:translate(id: configuration.title, default: configuration.title)}</span><span class="badge badge-success widget-content-badge-number"><f:count>{items}</f:count></span> </div>
-<div class="widget-content-main">
+<f:layout name="Widget/Widget" />
+
+<f:section name="title">
+    <div class="widget-content-title-badge"><span>{f:translate(id: configuration.title, default: configuration.title)}</span><span class="badge badge-success widget-content-badge-number"><f:count>{items}</f:count></span> </div>
+</f:section>
+
+<f:section name="main">
     <div class="widget-table-wrapper">
         <table class="widget-table">
             <tr>
@@ -31,10 +36,13 @@
             </f:for>
         </table>
     </div>
-</div>
-<f:if condition="{button}">
-    <div class="widget-content-footer">
-        <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.title, default: button.title)}</a>
-    </div>
-</f:if>
+</f:section>
+
+<f:section name="footer">
+    <f:if condition="{button}">
+        <div class="widget-content-footer">
+            <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.title, default: button.title)}</a>
+        </div>
+    </f:if>
+</f:section>
 </html>
