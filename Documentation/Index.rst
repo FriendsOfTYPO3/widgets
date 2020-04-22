@@ -27,7 +27,7 @@ Widgets
    `CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__ (Creative Commons)
    license
 
-A collection of widgets for the Dashboard of TYPO3.
+A collection of Widgets for the Dashboard of TYPO3.
 
 **TYPO3**
 
