@@ -1,17 +1,26 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
-<div class="widget-content-title"><span>{f:translate(id: configuration.title, default: configuration.title)}</span> </div>
-<div class="widget-content-main">
+<f:layout name="Widget/Widget" />
+
+<f:section name="main">
     <div class="row">
         <div class="col-sm-8">
             <p>
-                {f:translate(id: contact.introduction, default: contact.introduction) -> f:format.raw()}
+                {f:translate(key: options.introText, default: options.introText) -> f:format.raw()}
+            </p>
+            <p>
+                {config.company}
+                {config.address}
+                {config.postalCode}
+                {config.place}
+                {config.tel}
+                {config.mail}
+                {config.website}
             </p>
         </div>
         <div class="col-sm-4">
-            <img src="{f:uri.resource(path: 'Images/typo3_orange.svg', extensionName: 'backend')}"
-                 class="widget-t3information-logo"
-                 alt="{f:translate(id: typo3, default: typo3)}"/>
+            afb
         </div>
     </div>
-</div>
+</f:section>
+
 </html>

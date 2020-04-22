@@ -36,6 +36,10 @@
 			<trans-unit id="lastChange" xml:space="preserve">
 				<source>Last change</source>
 			</trans-unit>
+			<trans-unit id="contactIntroTextDefault" xml:space="preserve">
+				<source>Contact information:</source>
+			</trans-unit>
+
 			<trans-unit id="widgets.dashboard.widget.onlineUsers.title" xml:space="preserve">
 				<source>Current online users</source>
 			</trans-unit>

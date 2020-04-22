@@ -56,6 +56,15 @@ services:
       $view: '@dashboard.views.widget'
       $options:
         template: 'Widget/ContactWidget'
+        introText: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:contactIntroTextDefault'
+        company: 'Your TYPO3 agency'
+        address: '-'
+        postalCode: '-'
+        place: '-'
+        tel: '-'
+        mail: '-'
+        website: '-'
+        logoPath: 'logopath.svg'
     tags:
       - name: dashboard.widget
         identifier: 'widgets-contact'
