@@ -1,7 +1,11 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Widget/Widget" />
-<f:section name="main">
 
+<f:section name="title">
+    <div class="widget-content-title-badge"><span>{f:translate(id: configuration.title, default: configuration.title)}</span><span class="badge badge-info widget-content-badge-number"><f:count>{reports}</f:count></span> </div>
+</f:section>
+
+<f:section name="main">
     <f:if condition="{reports -> f:count()}">
         <f:then>
             <div class="widget-table-wrapper">
@@ -26,10 +30,8 @@
             </div>
         </f:else>
     </f:if>
-
-
-
 </f:section>
+
 <f:section name="footer">
     <f:if condition="{button}">
         <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.title, default: button.title)}</a>
