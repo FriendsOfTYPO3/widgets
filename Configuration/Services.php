@@ -19,7 +19,6 @@ return function (ContainerConfigurator $configurator, ContainerBuilder $containe
             ->class(StatusReportWidget::class)
             ->arg('$view', new Reference('dashboard.views.widget'))
             ->arg('$buttonProvider', new Reference('FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider'))
-            ->arg('$options', ['template' => 'Widget/StatusReportWidget'])
             ->tag(
                 'dashboard.widget',
                 [
