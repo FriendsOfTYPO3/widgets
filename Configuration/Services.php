@@ -41,7 +41,7 @@ return function (ContainerConfigurator $configurator, ContainerBuilder $containe
             ->arg('$dataProvider', new Reference('FriendsOfTYPO3\Widgets\Widgets\Provider\PagesWithoutDescriptionDataProvider'))
             ->arg('$view', new Reference('dashboard.views.widget'))
             ->arg('$buttonProvider', null)
-            ->arg('$options', ['template' => 'Widget/PageOverviewWidget'])
+            ->arg('$options', ['template' => 'Widget/PageWithoutMetaDescriptionWidget'])
             ->tag(
                 'dashboard.widget',
                 [
@@ -50,7 +50,7 @@ return function (ContainerConfigurator $configurator, ContainerBuilder $containe
                     'title' => 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.pagesWithoutMetaDescription.title',
                     'description' => 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.pagesWithoutMetaDescription.description',
                     'iconIdentifier' => 'content-widget-list',
-                    'height' => 'medium',
+                    'height' => 'large',
                     'width' => 'medium'
                 ]
             )
