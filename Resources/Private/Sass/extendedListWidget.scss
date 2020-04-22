@@ -1,11 +1,13 @@
+@import 'Base';
+
 .widget {
-    .widget-content-title--badge {
+    .widget-content-title-badge {
         display: flex;
     }
 
     .widget-content-badge-number {
-        line-height: 1.1;
         margin-left: 6px;
+        padding: 5px 7px;
     }
 
     .widget-table-usertype {
