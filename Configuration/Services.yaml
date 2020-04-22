@@ -10,7 +10,7 @@ services:
   FriendsOfTYPO3\Widgets\Widgets\Provider\PagesWithoutDescriptionDataProvider:
     arguments:
       $excludedDoktypes: [3, 4, 6, 7, 199, 254, 255]
-      $limit: 5
+      $limit: 8
 
   FriendsOfTYPO3\Widgets\Widgets\Provider\StatusReportButtonProvider:
     arguments:
