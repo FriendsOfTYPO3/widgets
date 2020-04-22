@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#A4276A" x="0" y="0" width="64" height="64"></rect>
+        <polygon id="Path" fill="#D193B4" points="40.2508616 14.0007519 30.5002193 23.7496867 40.2501097 33.5001253 50 23.7504386"></polygon>
+        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="14 14 14 30.4998747 30.5002193 30.4998747 30.5002193 23.7489347 30.5002193 14"></polygon>
+        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="14 50 30.5002193 50 30.5002193 33.5001253 14 33.5001253"></polygon>
+        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="33.5005326 33.5001253 33.5005326 49.9992481 50 49.9992481 50 33.5001253 40.2508616 33.5001253"></polygon>
+    </g>
+</svg>
