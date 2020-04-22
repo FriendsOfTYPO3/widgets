@@ -7,11 +7,13 @@
         <table class="widget-table">
             <tr>
                 <th><f:translate key="page" extensionName="widgets" /></th>
+                <th><f:translate key="lastChange" extensionName="widgets" /></th>
                 <th></th>
             </tr>
             <f:for each="{pages}" as="page">
                 <tr>
                     <td><strong>{page.title}</strong><br />{page.slug}</td>
+                    <td><f:format.date format="{dateFormat} {timeFormat}">{page.tstamp}</f:format.date></td>
                     <td class="text-right">
                         <be:link.editRecord uid="{page.uid}" table="pages" returnUrl="{be:moduleLink(route: 'dashboard')}">
                             <core:icon identifier="actions-open" alternativeMarkupIdentifier="inline" />
