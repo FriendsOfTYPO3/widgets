@@ -39,13 +39,20 @@ class ContactWidget implements WidgetInterface,  AdditionalCssInterface
      */
     private $options;
 
+    /**
+     * @var null
+     */
+    private $buttonProvider;
+
     public function __construct(
         WidgetConfigurationInterface $configuration,
         StandaloneView $view,
+        $buttonProvider = null,
         array $options = []
     ) {
         $this->configuration = $configuration;
         $this->view = $view;
+        $this->buttonProvider = $buttonProvider;
         $this->options = $options;
     }
 
@@ -62,6 +69,7 @@ class ContactWidget implements WidgetInterface,  AdditionalCssInterface
         $this->view->setTemplate('Widget/ContactWidget');
         $this->view->assignMultiple([
             'options' => $this->options,
+            'button' => $this->buttonProvider,
             'configuration' => $this->configuration,
         ]);
         return $this->view->render();

@@ -42,9 +42,6 @@
 			<trans-unit id="mail" xml:space="preserve">
 				<source>Mail:</source>
 			</trans-unit>
-			<trans-unit id="contactIntroTextDefault" xml:space="preserve">
-				<source>Contact information:</source>
-			</trans-unit>
 
 			<trans-unit id="widgets.dashboard.widget.onlineUsers.title" xml:space="preserve">
 				<source>Current online users</source>

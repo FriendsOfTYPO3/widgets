@@ -2,9 +2,9 @@
 <f:layout name="Widget/Widget"/>
 
 <f:section name="main">
-    <f:if condition="{options.introTextLl}">
+    <f:if condition="{options.introText}">
         <p>
-            {f:translate(key: options.introTextLl, default: options.introTextLl) -> f:format.raw()}
+            {f:translate(key: options.introText, default: options.introText) -> f:format.raw()}
         </p>
     </f:if>
     <p>
@@ -41,6 +41,12 @@
         <img src="{f:uri.image(src: options.logoPath, maxWidth: '290')}"
              class="widget-contact-logo"
              alt="{f:translate(key: options.company, default: options.company)}"/>
+    </f:if>
+</f:section>
+
+<f:section name="footer">
+    <f:if condition="{button.title}">
+        <a href="{button.link}" target="{button.target}" class="widget-cta">{f:translate(id: button.title, default: button.title)}</a>
     </f:if>
 </f:section>
 

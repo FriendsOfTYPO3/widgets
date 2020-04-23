@@ -50,21 +50,29 @@ services:
         height: 'medium'
         width: 'medium'
 
+  dashboard.buttons.contact:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: ''
+      $link: ''
+      $target: '_blank'
+
   widgets.dashboard.widget.contact:
     class: 'FriendsOfTYPO3\Widgets\Widgets\ContactWidget'
     arguments:
       $view: '@dashboard.views.widget'
+      $buttonProvider: '@dashboard.buttons.contact'
       $options:
         template: 'Widget/ContactWidget'
-        introTextLl: ''
+        introText: ''
         company: 'Your TYPO3 agency'
-        address: '-'
-        postalCode: '-'
-        place: '-'
-        tel: '-'
-        mail: '-'
-        website: '-'
-        logoPath: 'logopath.svg'
+        address: ''
+        postalCode: ''
+        place: ''
+        tel: ''
+        mail: ''
+        website: ''
+        logoPath: ''
     tags:
       - name: dashboard.widget
         identifier: 'widgets-contact'
