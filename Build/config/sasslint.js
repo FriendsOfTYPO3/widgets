@@ -1,13 +1,5 @@
 module.exports = function (grunt) {
   return {
-    dev: {
-      options: {
-        configFile: '../.sass-lint.yml'
-      },
-      files: [
-        {src: grunt.config.get('sassDirectory') + '/**/*.scss'}
-      ]
-    },
     build: {
       options: {
         configFile: '../.sass-lint.yml',

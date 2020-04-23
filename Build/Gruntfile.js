@@ -61,7 +61,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('lint', 'sasslint:dev');
+  grunt.registerTask('lint', 'sasslint:build');
   for (let widget in config.widgets) {
     grunt.registerTask(widget, ['sass:' + widget, 'postcss:' + widget, 'watch:' + widget, 'cssmin:build']);
   }
