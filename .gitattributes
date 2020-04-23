@@ -1,0 +1,4 @@
+/.gitattributes export-ignore
+/Tests/ export-ignore
+/Build/ export-ignore
+/.github/ export-ignore
