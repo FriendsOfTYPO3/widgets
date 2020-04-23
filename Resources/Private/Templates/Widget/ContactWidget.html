@@ -1,26 +1,47 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Widget/Widget" />
+<f:layout name="Widget/Widget"/>
 
 <f:section name="main">
-    <div class="row">
-        <div class="col-sm-8">
-            <p>
-                {f:translate(key: options.introText, default: options.introText) -> f:format.raw()}
-            </p>
-            <p>
-                {config.company}
-                {config.address}
-                {config.postalCode}
-                {config.place}
-                {config.tel}
-                {config.mail}
-                {config.website}
-            </p>
-        </div>
-        <div class="col-sm-4">
-            afb
-        </div>
-    </div>
+    <f:if condition="{options.introTextLl}">
+        <p>
+            {f:translate(key: options.introTextLl, default: options.introTextLl) -> f:format.raw()}
+        </p>
+    </f:if>
+    <p>
+        <f:if condition="{options.company}">
+            <strong>{options.company}</strong> <br/>
+        </f:if>
+        <f:if condition="{options.address}">
+            {options.address} <br/>
+        </f:if>
+        <f:if condition="{options.postalCode} || {options.place}">
+            {options.postalCode} {options.place} <br/>
+        </f:if>
+    </p>
+    <f:if condition="{options.tel} || {options.mail}">
+        <p>
+            <f:if condition="{options.tel}">
+                <f:translate key="telephone" extensionName="widgets"/>
+                {options.tel} <br/>
+            </f:if>
+            <f:if condition="{options.mail}">
+                <f:translate key="mail" extensionName="widgets"/>
+                <f:link.email email="{options.mail}" class="contact-widget-link">
+                    <strong>{options.mail}</strong></f:link.email>
+                <br/>
+            </f:if>
+        </p>
+    </f:if>
+    <f:if condition="{options.website}">
+        <p>
+            <a href="{options.website}" target="_blank" class="contact-widget-link"><strong>{options.website}</strong></a>
+        </p>
+    </f:if>
+    <f:if condition="{options.logoPath}">
+        <img src="{f:uri.image(src: options.logoPath, maxWidth: '290')}"
+             class="widget-contact-logo"
+             alt="{f:translate(key: options.company, default: options.company)}"/>
+    </f:if>
 </f:section>
 
 </html>

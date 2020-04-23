@@ -17,11 +17,12 @@ declare(strict_types=1);
 
 namespace FriendsOfTYPO3\Widgets\Widgets;
 
+use TYPO3\CMS\Dashboard\Widgets\AdditionalCssInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetConfigurationInterface;
 use TYPO3\CMS\Dashboard\Widgets\WidgetInterface;
 use TYPO3\CMS\Fluid\View\StandaloneView;
 
-class ContactWidget implements WidgetInterface
+class ContactWidget implements WidgetInterface,  AdditionalCssInterface
 {
     /**
      * @var WidgetConfigurationInterface
@@ -46,6 +47,13 @@ class ContactWidget implements WidgetInterface
         $this->configuration = $configuration;
         $this->view = $view;
         $this->options = $options;
+    }
+
+    public function getCssFiles(): array
+    {
+        return [
+            'EXT:widgets/Resources/Public/Css/contactWidget.css',
+        ];
     }
 
     public function renderWidgetContent(): string

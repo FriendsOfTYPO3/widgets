@@ -36,6 +36,12 @@
 			<trans-unit id="lastChange" xml:space="preserve">
 				<source>Last change</source>
 			</trans-unit>
+			<trans-unit id="telephone" xml:space="preserve">
+				<source>Tel:</source>
+			</trans-unit>
+			<trans-unit id="mail" xml:space="preserve">
+				<source>Mail:</source>
+			</trans-unit>
 			<trans-unit id="contactIntroTextDefault" xml:space="preserve">
 				<source>Contact information:</source>
 			</trans-unit>
