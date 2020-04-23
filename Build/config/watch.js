@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     if (widgets.hasOwnProperty(widget)) {
       watchTask[widget] = {
         files: grunt.config.get('sassDirectory') + '/**/*.scss',
-        tasks: ['sass:' + widget, 'postcss:' + widget, 'bsReload:css'],
+        tasks: ['sass:' + widget, 'postcss:' + widget],
         options: {
           spawn: false,
           event: 'changed'
