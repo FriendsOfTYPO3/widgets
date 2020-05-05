@@ -26,6 +26,11 @@ module.exports = function (grunt) {
         scssFilePaths: [],
         cssFilePaths: []
       },
+      'reportsWidget': {
+        stylesheets: ['reportsWidget'],
+        scssFilePaths: [],
+        cssFilePaths: []
+      },
       'contactWidget': {
         stylesheets: ['contactWidget'],
         scssFilePaths: [],
