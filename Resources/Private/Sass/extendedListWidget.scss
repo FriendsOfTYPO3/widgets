@@ -1,16 +1,16 @@
-@import 'Base';
+@import "Base";
 
 .widget {
-    .widget-content-title-badge {
-        display: flex;
-    }
+	.widget-content-title-badge {
+		display: flex;
+	}
 
-    .widget-content-badge-number {
-        margin-left: 6px;
-        padding: 5px 7px;
-    }
+	.widget-content-badge-number {
+		padding: 5px 7px;
+		margin-left: 6px;
+	}
 
-    .widget-table-usertype {
-        width: 45px;
-    }
+	.widget-table-usertype {
+		width: 45px;
+	}
 }
