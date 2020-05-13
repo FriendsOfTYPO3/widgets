@@ -41,22 +41,32 @@ class PagesWithoutDescriptionDataProvider implements PageProviderInterface
         ];
 
         $items = [];
+        $counter = 0;
+        $iterator = 0;
 
-        $results = $queryBuilder
+        while ($counter < $this->limit) {
+            $row = $queryBuilder
             ->select('*')
             ->from('pages')
             ->where(...$constraints)
             ->orderBy('tstamp', 'DESC')
-            ->setMaxResults($this->limit)
+                ->setFirstResult($iterator)
+                ->setMaxResults(1)
             ->execute()
-            ->fetchAll();
+                ->fetch();
 
-        foreach($results as $row) {
+            $iterator++;
+
+            if($row === false) {
+                return $items;
+            }
+
             if (!$this->getBackendUser()->doesUserHaveAccess($row, Permission::PAGE_SHOW)) {
                 continue;
             }
 
             $items[] = $row;
+            $counter++;
         }
 
         return $items;
