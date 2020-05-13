@@ -46,13 +46,13 @@ class PagesWithoutDescriptionDataProvider implements PageProviderInterface
 
         while ($counter < $this->limit) {
             $row = $queryBuilder
-            ->select('*')
-            ->from('pages')
-            ->where(...$constraints)
-            ->orderBy('tstamp', 'DESC')
+                ->select('*')
+                ->from('pages')
+                ->where(...$constraints)
+                ->orderBy('tstamp', 'DESC')
                 ->setFirstResult($iterator)
                 ->setMaxResults(1)
-            ->execute()
+                ->execute()
                 ->fetch();
 
             $iterator++;
@@ -69,7 +69,6 @@ class PagesWithoutDescriptionDataProvider implements PageProviderInterface
             $items[] = $row;
             $counter++;
         }
-
         return $items;
     }
 
