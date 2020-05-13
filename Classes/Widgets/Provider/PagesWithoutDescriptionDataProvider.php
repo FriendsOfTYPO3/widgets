@@ -57,6 +57,7 @@ class PagesWithoutDescriptionDataProvider implements PageProviderInterface
 
             $iterator++;
 
+            // If the $row is false, no row is returned from database. All matched $items in array will be returned.
             if($row === false) {
                 return $items;
             }
