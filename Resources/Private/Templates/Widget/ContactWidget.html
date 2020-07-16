@@ -17,6 +17,9 @@
         <f:if condition="{options.postalCode} || {options.place}">
             {options.postalCode} {options.place} <br/>
         </f:if>
+        <f:if condition="{options.country}">
+            {options.country} <br/>
+        </f:if>
     </p>
     <f:if condition="{options.tel} || {options.mail}">
         <p>

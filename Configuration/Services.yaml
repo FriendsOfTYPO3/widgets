@@ -69,6 +69,7 @@ services:
         address: ''
         postalCode: ''
         place: ''
+        country: ''
         tel: ''
         mail: ''
         website: ''

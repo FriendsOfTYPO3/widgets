@@ -1,17 +1,17 @@
 # Widgets for the TYPO3 Dashboard
 This extension contains several widgets, which can be used on the Dashboard for TYPO3. To use
-these widgets you need to install the TYPO3 core-extension called dashboard. 
+these widgets you need to install the TYPO3 core-extension called dashboard.
 
 The extension only contains widgets showing data that is available in core extensions. So for
 these widgets no 3rd party extensions are needed.
 
 ## Overview of widgets
 This extension currently contains the following widgets:
-* 
+* **Contact information**, Will show contact information of your supplier;
 
 ## I miss widgets!
 Do you have an idea for a widget showing information that is available by core extensions, please
-create a new widget request with your ideas. 
+create a new widget request with your ideas.
 
 [Request new widget](https://github.com/FriendsOfTYPO3/widgets/issues/new?labels=widget&template=widget-request.md)
 
