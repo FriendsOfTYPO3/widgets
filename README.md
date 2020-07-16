@@ -7,6 +7,9 @@ these widgets no 3rd party extensions are needed.
 
 ## Overview of widgets
 This extension currently contains the following widgets:
+* **Current online users**, Will show you which users are currently online;
+* **Status Report**, Gives you an overview of errors and warnings in your installation;
+* **Pages without Meta Description**, Returns a list of last edited pages without a Meta Description;
 * **Contact information**, Will show contact information of your supplier;
 
 ## I miss widgets!
