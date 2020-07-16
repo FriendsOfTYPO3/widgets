@@ -53,8 +53,8 @@ services:
   dashboard.buttons.contact:
     class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
     arguments:
-      $title: ''
-      $link: ''
+      $title: 'Find a partner'
+      $link: 'https://typo3.com/services/find-a-typo3-partner/official-typo3-partner-finder'
       $target: '_blank'
 
   widgets.dashboard.widget.contact:
@@ -64,8 +64,8 @@ services:
       $buttonProvider: '@dashboard.buttons.contact'
       $options:
         template: 'Widget/ContactWidget'
-        introText: ''
-        company: 'Your TYPO3 agency'
+        introText: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.contact.defaultIntro'
+        company: ''
         address: ''
         postalCode: ''
         place: ''
@@ -73,7 +73,7 @@ services:
         tel: ''
         mail: ''
         website: ''
-        logoPath: ''
+        logoPath: 'EXT:backend/Resources/Public/Images/typo3_orange.svg'
     tags:
       - name: dashboard.widget
         identifier: 'widgets-contact'

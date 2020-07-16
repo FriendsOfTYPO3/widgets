@@ -2,6 +2,20 @@
 <f:layout name="Widget/Widget"/>
 
 <f:section name="main">
+    <f:if condition="{options.company}">
+        <f:then>
+        <f:variable name="logoName">{f:translate(key: options.company, default: options.company)}</f:variable>
+        </f:then>
+        <f:else>
+            <f:variable name="logoName">{f:translate(key: 'widgets.dashboard.widget.contact.defaultCompany')}</f:variable>
+        </f:else>
+    </f:if>
+    <f:if condition="{options.logoPath}">
+        <img src="{f:uri.image(src: options.logoPath, maxWidth: '290')}"
+             class="widget-contact-logo"
+             alt="{logoName}"/>
+    </f:if>
+
     <f:if condition="{options.introText}">
         <p>
             {f:translate(key: options.introText, default: options.introText) -> f:format.raw()}
@@ -39,11 +53,6 @@
         <p>
             <a href="{options.website}" target="_blank" class="contact-widget-link"><strong>{options.website}</strong></a>
         </p>
-    </f:if>
-    <f:if condition="{options.logoPath}">
-        <img src="{f:uri.image(src: options.logoPath, maxWidth: '290')}"
-             class="widget-contact-logo"
-             alt="{f:translate(key: options.company, default: options.company)}"/>
     </f:if>
 </f:section>
 

@@ -73,6 +73,14 @@
 			<trans-unit id="widgets.dashboard.widget.contact.description" xml:space="preserve">
 				<source>Will show contact information of your supplier</source>
 			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.contact.defaultCompany" xml:space="preserve">
+				<source>TYPO3</source>
+			</trans-unit>
+			<trans-unit id="widgets.dashboard.widget.contact.defaultIntro" xml:space="preserve">
+				<source><![CDATA[ <b>No information of your supplier found!</b> <br/><br/>
+						Good partners are crucial to success. Our certified, audited partner agencies and freelancers are doing remarkable, high-quality work every day and we can help you find the best match for your project.]]>
+				</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
