@@ -42,5 +42,10 @@
     "cgl-fix": [
       "php-cs-fixer fix -v --using-cache false"
     ]
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "widgets"
+    }
   }
 }
