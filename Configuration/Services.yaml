@@ -49,3 +49,37 @@ services:
         iconIdentifier: 'content-widget-list'
         height: 'medium'
         width: 'medium'
+
+  dashboard.buttons.contact:
+    class: 'TYPO3\CMS\Dashboard\Widgets\Provider\ButtonProvider'
+    arguments:
+      $title: 'Find a partner'
+      $link: 'https://typo3.com/services/find-a-typo3-partner/official-typo3-partner-finder'
+      $target: '_blank'
+
+  widgets.dashboard.widget.contact:
+    class: 'FriendsOfTYPO3\Widgets\Widgets\ContactWidget'
+    arguments:
+      $view: '@dashboard.views.widget'
+      $buttonProvider: '@dashboard.buttons.contact'
+      $options:
+        template: 'Widget/ContactWidget'
+        introText: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.contact.defaultIntro'
+        company: ''
+        address: ''
+        postalCode: ''
+        place: ''
+        country: ''
+        tel: ''
+        mail: ''
+        website: ''
+        logoPath: 'EXT:backend/Resources/Public/Images/typo3_orange.svg'
+    tags:
+      - name: dashboard.widget
+        identifier: 'widgets-contact'
+        groupNames: 'general'
+        title: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.contact.title'
+        description: 'LLL:EXT:widgets/Resources/Private/Language/locallang.xlf:widgets.dashboard.widget.contact.description'
+        iconIdentifier: 'content-widget-list'
+        height: 'medium'
+        width: 'small'
