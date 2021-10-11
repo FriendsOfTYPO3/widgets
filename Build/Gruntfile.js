@@ -31,6 +31,11 @@ module.exports = function (grunt) {
         scssFilePaths: [],
         cssFilePaths: []
       },
+      'contactWidget': {
+        stylesheets: ['contactWidget'],
+        scssFilePaths: [],
+        cssFilePaths: []
+      },
     },
     scssFilePaths: [],
   };

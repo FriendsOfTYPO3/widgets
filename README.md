@@ -10,6 +10,7 @@ This extension currently contains the following widgets:
 * **Current online users**, Will show you which users are currently online;
 * **Status Report**, Gives you an overview of errors and warnings in your installation;
 * **Pages without Meta Description**, Returns a list of last edited pages without a Meta Description;
+* **Contact information**, Will show contact information of your supplier;
 
 ## I miss widgets!
 Do you have an idea for a widget showing information that is available by core extensions, please

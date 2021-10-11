@@ -1,7 +1,7 @@
+.DS_Store
 /.idea
 /composer.lock
 /.vscode
-/.DS_Store
 /.ddev
 /logs
 /var
