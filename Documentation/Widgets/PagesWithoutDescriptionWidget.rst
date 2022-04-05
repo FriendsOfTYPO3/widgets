@@ -28,7 +28,7 @@ the page properties of the specific page.
 Options
 -------
 This widget has some options. To override the default options, see
-:ref:`Adjust settings of registered widgets <ext_dashboard:adjust-settings-of-registered-widgets>`.
+:ref:`ext_dashboard:adjust-settings-of-widget`.
 
 
 .. option:: $excludedDoktypes

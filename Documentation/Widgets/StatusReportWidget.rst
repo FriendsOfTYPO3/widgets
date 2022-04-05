@@ -23,7 +23,7 @@ You can also click on the link to go to the reports module.
 Options
 -------
 This widget has some options. To override the default options, see
-:ref:`Adjust settings of registered widgets <ext_dashboard:adjust-settings-of-registered-widgets>`.
+:ref:`ext_dashboard:adjust-settings-of-widget`.
 
 .. option:: showErrors
 
