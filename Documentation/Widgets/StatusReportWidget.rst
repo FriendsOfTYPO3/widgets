@@ -17,22 +17,27 @@ You can also click on the link to go to the reports module.
 
 .. important::
 
-   This widget is only available when you have **EXT:reports** installed and activated
+   This widget is only available when you have
+   `EXT:reports <https://extensions.typo3.org/extension/reports>`__
+   installed and activated.
 
 
 Options
 -------
-This widget has some options. To override the default options, see
-:ref:`ext_dashboard:adjust-settings-of-widget`.
 
-.. option:: showErrors
+This widget has some options. To override the default options, see
+":ref:`ext_dashboard:adjust-settings-of-widget`" in the dashboard documentation.
+
+.. confval:: showErrors
+
+   :type: bool
+   :default: true
 
    Define if you want to show reports with the severity error in your widget.
 
-   **Default:** true
+.. confval:: showWarnings
 
-.. option:: showWarnings
+   :type: bool
+   :default: false
 
    Define if you want to show reports with the severity warning in your widget.
-
-   **Default:** false

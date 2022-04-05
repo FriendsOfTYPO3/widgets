@@ -22,26 +22,29 @@ the page properties of the specific page.
 
 .. important::
 
-   This widget is only available when you have **EXT:seo** installed and activated
-
+   This widget is only available when you have
+   `EXT:seo <https://extensions.typo3.org/extension/seo>`__
+   installed and activated.
 
 Options
 -------
+
 This widget has some options. To override the default options, see
-:ref:`ext_dashboard:adjust-settings-of-widget`.
+":ref:`ext_dashboard:adjust-settings-of-widget`" in the dashboard documentation.
 
+.. confval:: excludedDoktypes
 
-.. option:: $excludedDoktypes
+   :type: string
+   :default: ``3, 4, 6, 7, 199, 254, 255``
 
    Some doktypes are not real pages and can be excluded from this overview.
 
-   **Default:** 3, 4, 6, 7, 199, 254, 255
+.. confval:: limit
 
-.. option:: $limit
+   :type: int
+   :default: ``8``
 
    The number of pages without a meta description to show within the widget.
-
-   **Default:** 8
 
 An example:
 
