@@ -1,24 +1,23 @@
-# Widgets for the TYPO3 Dashboard
-This extension contains several widgets, which can be used on the Dashboard for TYPO3. To use
-these widgets you need to install the TYPO3 core-extension called dashboard.
+[![Latest Stable Version](https://poser.pugx.org/friendsoftypo3/widgets/v/stable.svg)](https://extensions.typo3.org/extension/widgets/)
+[![TYPO3](https://img.shields.io/badge/TYPO3-10-orange.svg?style=flat-square)](https://get.typo3.org/version/10)
+[![Total Downloads](https://poser.pugx.org/friendsoftypo3/widgets/d/total.svg)](https://packagist.org/packages/friendsoftypo3/widgets)
+[![Monthly Downloads](https://poser.pugx.org/friendsoftypo3/widgets/d/monthly)](https://packagist.org/packages/friendsoftypo3/widgets)
 
-The extension only contains widgets showing data that is available in core extensions. So for
-these widgets no 3rd party extensions are needed.
+# TYPO3 extension `widgets`
 
-## Overview of widgets
-This extension currently contains the following widgets:
-* **Current online users**, Will show you which users are currently online;
-* **Status Report**, Gives you an overview of errors and warnings in your installation;
-* **Pages without Meta Description**, Returns a list of last edited pages without a Meta Description;
+This extension contains various widgets that can be used on the TYPO3 backend
+[dashboard](https://docs.typo3.org/c/typo3/cms-dashboard/main/en-us/).
 
-## I miss widgets!
-Do you have an idea for a widget showing information that is available by core extensions, please
-create a new widget request with your ideas.
+It currently contains the following widgets:
 
-[Request new widget](https://github.com/FriendsOfTYPO3/widgets/issues/new?labels=widget&template=widget-request.md)
+*  **Current Online Users**: Shows which users are currently online.
+*  **Status Report**: Gives you an overview of errors and warnings in your
+   installation.
+*  **Pages without meta description**: Provides a list of recently edited pages
+   that lack a meta description.
 
-```
-Please know that we don't add features to this extension. We neither will create widgets showing data
-from 3rd party extensions. In those cases, the widget should be in the 3rd party extension itself, or
-you can create your own extension with a dependency on that specific extension.
-```
+|                  | URL                                                         |
+|------------------|-------------------------------------------------------------|
+| **Repository:**  | https://github.com/FriendsOfTYPO3/widgets                   |
+| **Read online:** | https://docs.typo3.org/p/friendsoftypo3/widgets/main/en-us/ |
+| **TER:**         | https://extensions.typo3.org/extension/widgets              |

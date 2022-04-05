@@ -1,7 +1,7 @@
 {
   "name": "friendsoftypo3/widgets",
   "type": "typo3-cms-extension",
-  "description": "Dashboard Widgets for TYPO3",
+  "description": "Widgets Collection",
   "minimum-stability": "dev",
   "homepage": "https://typo3.org",
   "license": "GPL-2.0-or-later",

@@ -1,17 +1,14 @@
-.. every .rst file should include Includes.txt
-.. use correct path!
+.. include:: /Includes.txt
 
-.. include:: Includes.txt
+==================
+Widgets Collection
+==================
 
+:Extension key:
+   widgets
 
-.. Every manual should have a start label for cross-referencing to
-.. start page. Do not remove this!
-
-.. _start:
-
-=============================================================
-Widgets
-=============================================================
+:Package name:
+   friendsoftypo3/widgets
 
 :Version:
    |release|
@@ -19,43 +16,46 @@ Widgets
 :Language:
    en
 
-:Authors:
-   Richard Haeser, Koen Wouters
+:Author:
+   Richard Haeser, Koen Wouters & Contributors
 
 :License:
-   This extension documentation is published under the
-   `CC BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__ (Creative Commons)
-   license
+   This document is published under the
+   `Creative Commons BY-NC-SA 4.0 <https://creativecommons.org/licenses/by-nc-sa/4.0/>`__
+   license.
 
-A collection of Widgets for the Dashboard of TYPO3.
+:Rendered:
+   |today|
 
-**TYPO3**
+----
 
-   The content of this document is related to TYPO3 CMS,
-   a GNU/GPL CMS/Framework available from `typo3.org
-   <https://typo3.org/>`_ .
+This extension contains various widgets that can be used on the TYPO3 backend
+:doc:`dashboard <ext_dashboard:Index>`.
 
-**Community Documentation:**
+It currently contains the following widgets:
 
-   This documentation is community documentation for the TYPO3 extension widgets
+*  **Current Online Users**: Shows which users are currently online.
+*  **Status Report**: Gives you an overview of errors and warnings in your
+   installation.
+*  **Pages without meta description**: Provides a list of recently edited pages
+   that lack a meta description.
 
-   It is maintained as part of this third party extension.
+----
 
-   If you find an error or something is missing, please:
-   `Report a Problem <https://github.com/FriendsOfTYPO3/widgets/issues/new>`__
-
-**For Contributors**
-
-   You are welcome to help improve this guide. Just click on "Edit me on GitHub"
-   on the top right to submit your change request.
-
+**Table of Contents:**
 
 .. toctree::
-   :maxdepth: 3
-   :hidden:
-
+   :maxdepth: 2
+   :titlesonly:
 
    Introduction/Index
-   Widgets/Index
    Installation/Index
+   Widgets/Index
 
+.. Meta Menu
+
+.. toctree::
+   :hidden:
+
+   Sitemap
+   genindex
