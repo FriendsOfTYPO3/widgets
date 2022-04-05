@@ -14,10 +14,9 @@ This widget will show you the last edited pages without a meta description
 specified. You can click on the pencil icon behind every page to directly edit
 the page properties of the specific page.
 
-.. figure:: ../Images/PagesWithoutDescriptionWidget.png
+.. figure:: /Images/PagesWithoutDescriptionWidget.png
    :class: with-shadow
    :alt: This widget is showing the last edited pages without a meta description
-   :width: 500px
 
    This widget is showing the last edited pages without a meta description
 
@@ -28,7 +27,8 @@ the page properties of the specific page.
 
 Options
 -------
-This widget has some options. To override the default options, see :ref:`Adjust settings of registered widgets <dashboard:adjust-settings-of-registered-widgets>`.
+This widget has some options. To override the default options, see
+:ref:`Adjust settings of registered widgets <ext_dashboard:adjust-settings-of-registered-widgets>`.
 
 
 .. option:: $excludedDoktypes

@@ -9,10 +9,9 @@ Status Report Widget
 This widget will give you an overview of all possible problems in your installation.
 You can also click on the link to go to the reports module.
 
-.. figure:: ../Images/StatusReportWidget.png
+.. figure:: /Images/StatusReportWidget.png
    :class: with-shadow
    :alt: An example of the Status Report Widget
-   :width: 500px
 
    This is how the Status Report widget could look like.
 
@@ -23,7 +22,8 @@ You can also click on the link to go to the reports module.
 
 Options
 -------
-This widget has some options. To override the default options, see :ref:`Adjust settings of registered widgets <dashboard:adjust-settings-of-registered-widgets>`.
+This widget has some options. To override the default options, see
+:ref:`Adjust settings of registered widgets <ext_dashboard:adjust-settings-of-registered-widgets>`.
 
 .. option:: showErrors
 
