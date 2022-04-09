@@ -1,5 +1,5 @@
 [![Latest Stable Version](https://poser.pugx.org/friendsoftypo3/widgets/v/stable.svg)](https://extensions.typo3.org/extension/widgets/)
-[![TYPO3](https://img.shields.io/badge/TYPO3-10-orange.svg?style=flat-square)](https://get.typo3.org/version/10)
+[![TYPO3 10](https://img.shields.io/badge/TYPO3-10-orange.svg?style=flat-square)](https://get.typo3.org/version/10)
 [![Total Downloads](https://poser.pugx.org/friendsoftypo3/widgets/d/total.svg)](https://packagist.org/packages/friendsoftypo3/widgets)
 [![Monthly Downloads](https://poser.pugx.org/friendsoftypo3/widgets/d/monthly)](https://packagist.org/packages/friendsoftypo3/widgets)
 
