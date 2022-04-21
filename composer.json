@@ -1,7 +1,7 @@
 {
   "name": "friendsoftypo3/widgets",
   "type": "typo3-cms-extension",
-  "description": "Widgets Collection",
+  "description": "Dashboard Widgets Collection",
   "minimum-stability": "dev",
   "homepage": "https://extensions.typo3.org/extension/widgets",
   "support": {

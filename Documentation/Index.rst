@@ -1,8 +1,8 @@
 .. include:: /Includes.rst.txt
 
-==================
-Widgets Collection
-==================
+============================
+Dashboard Widgets Collection
+============================
 
 :Extension key:
    widgets

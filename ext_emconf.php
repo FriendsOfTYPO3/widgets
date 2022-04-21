@@ -1,6 +1,6 @@
 <?php
 $EM_CONF[$_EXTKEY] = [
-    'title' => 'Widgets Collection',
+    'title' => 'Dashboard Widgets Collection',
     'description' => 'A collection of widgets for the Dashboard of TYPO3',
     'category' => 'fe',
     'author' => 'Richard Haeser, Koen Wouters',
