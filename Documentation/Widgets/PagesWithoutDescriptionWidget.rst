@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _pages-without-description-widget:
 
@@ -14,34 +14,37 @@ This widget will show you the last edited pages without a meta description
 specified. You can click on the pencil icon behind every page to directly edit
 the page properties of the specific page.
 
-.. figure:: ../Images/PagesWithoutDescriptionWidget.png
+.. figure:: /Images/PagesWithoutDescriptionWidget.png
    :class: with-shadow
    :alt: This widget is showing the last edited pages without a meta description
-   :width: 500px
 
    This widget is showing the last edited pages without a meta description
 
 .. important::
 
-   This widget is only available when you have **EXT:seo** installed and activated
-
+   This widget is only available when you have
+   `EXT:seo <https://extensions.typo3.org/extension/seo>`__
+   installed and activated.
 
 Options
 -------
-This widget has some options. To override the default options, see :ref:`Adjust settings of registered widgets <dashboard:adjust-settings-of-registered-widgets>`.
 
+This widget has some options. To override the default options, see
+":ref:`ext_dashboard:adjust-settings-of-widget`" in the dashboard documentation.
 
-.. option:: $excludedDoktypes
+.. confval:: excludedDoktypes
+
+   :type: string
+   :default: ``3, 4, 6, 7, 199, 254, 255``
 
    Some doktypes are not real pages and can be excluded from this overview.
 
-   **Default:** 3, 4, 6, 7, 199, 254, 255
+.. confval:: limit
 
-.. option:: $limit
+   :type: int
+   :default: ``8``
 
    The number of pages without a meta description to show within the widget.
-
-   **Default:** 8
 
 An example:
 

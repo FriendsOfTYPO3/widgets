@@ -1,9 +1,14 @@
 {
   "name": "friendsoftypo3/widgets",
   "type": "typo3-cms-extension",
-  "description": "Dashboard Widgets for TYPO3",
+  "description": "Dashboard Widgets Collection",
   "minimum-stability": "dev",
-  "homepage": "https://typo3.org",
+  "homepage": "https://extensions.typo3.org/extension/widgets",
+  "support": {
+	"docs": "https://docs.typo3.org/p/friendsoftypo3/widgets/main/en-us/",
+	"issues": "https://github.com/FriendsOfTYPO3/widgets/issues",
+	"source": "https://github.com/FriendsOfTYPO3/widgets"
+  },
   "license": "GPL-2.0-or-later",
   "authors": [
     {
